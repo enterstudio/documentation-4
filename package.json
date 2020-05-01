@@ -54,7 +54,8 @@
     "vfile-sort": "^2.0.0",
     "vinyl": "^2.0.0",
     "vinyl-fs": "^2.3.1",
-    "yargs": "^9.0.1"
+    "yargs": "^9.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "are-we-flow-yet": "^1.0.0",
@@ -102,12 +103,13 @@
     "build": "rm -rf lib && babel -D src -d lib && npm run doc",
     "release": "standard-version",
     "precommit": "lint-staged --verbose",
-    "prepublish": "npm run build",
+    "prepublish": "yarn run snyk-protect && npm run build",
     "format": "prettier --write '{src,__tests__,declarations,bin,default_theme}/**/*.js' --single-quote",
     "doc": "node ./bin/documentation.js build src/index.js -f md --access=public > docs/NODE_API.md",
     "self-lint": "node ./bin/documentation.js lint src",
     "test": "npm run build && eslint . && are-we-flow-yet src && flow check && jest",
-    "test-ci": "npm run build && eslint . && are-we-flow-yet src && flow check && jest --runInBand"
+    "test-ci": "npm run build && eslint . && are-we-flow-yet src && flow check && jest --runInBand",
+    "snyk-protect": "snyk protect"
   },
   "jest": {
     "testPathIgnorePatterns": [
@@ -140,5 +142,6 @@
       "remote-origin-url",
       "mime"
     ]
-  }
+  },
+  "snyk": true
 }
