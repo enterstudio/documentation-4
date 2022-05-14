@@ -50,11 +50,11 @@
     "unist-builder": "^1.0.0",
     "unist-util-visit": "^1.0.1",
     "vfile": "^2.0.0",
-    "vfile-reporter": "^4.0.0",
+    "vfile-reporter": "^6.0.0",
     "vfile-sort": "^2.0.0",
     "vinyl": "^2.0.0",
     "vinyl-fs": "^2.3.1",
-    "yargs": "^9.0.1"
+    "yargs": "^13.2.4"
   },
   "devDependencies": {
     "are-we-flow-yet": "^1.0.0",
