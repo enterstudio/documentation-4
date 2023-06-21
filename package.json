@@ -38,7 +38,7 @@
     "module-deps-sortable": "4.0.6",
     "parse-filepath": "^1.0.1",
     "pify": "^3.0.0",
-    "read-pkg-up": "^2.0.0",
+    "read-pkg-up": "^8.0.0",
     "remark": "^8.0.0",
     "remark-html": "6.0.1",
     "remark-toc": "^4.0.0",
@@ -54,7 +54,7 @@
     "vfile-sort": "^2.0.0",
     "vinyl": "^2.0.0",
     "vinyl-fs": "^2.3.1",
-    "yargs": "^9.0.1"
+    "yargs": "^10.0.0"
   },
   "devDependencies": {
     "are-we-flow-yet": "^1.0.0",
